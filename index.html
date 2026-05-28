@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>4月のシフト</title>
+<title>6月のシフト</title>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  background: #fff9fb;
+  background: #f4f2fa;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,97 +15,99 @@ body {
 }
 .wrap {
   width: 100%;
-  max-width: 720px;
+  max-width: 760px;
   font-family: 'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
   background: #fff;
   border-radius: 20px;
   padding: 2rem 1.5rem 2.5rem;
-  border: 0.5px solid #f4dce6;
+  border: 0.5px solid #c8c0e8;
 }
 
 .header-area { text-align: center; margin-bottom: 1.4rem; }
-.cal-en {
-  font-family: 'Georgia',serif; font-size: 11px; letter-spacing: 0.28em;
-  color: #d4a0b0; text-transform: uppercase; margin-bottom: 6px;
-}
+.cal-en { font-family:'Georgia',serif; font-size:11px; letter-spacing:0.28em; color:#8878c8; text-transform:uppercase; margin-bottom:6px; }
 .header-deco { display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:5px; }
-.deco-line { height: 0.5px; width: 44px; background: #f0c8d4; }
-.deco-dot { width: 4px; height: 4px; border-radius: 50%; background: #e8a8bc; flex-shrink: 0; }
-.cal-title {
-  font-family: 'Hiragino Mincho ProN','Yu Mincho','Georgia',serif;
-  font-size: 23px; font-weight: 400; color: #8a3a52; letter-spacing: 0.16em;
-}
-.cal-sub { font-size: 10px; letter-spacing: 0.2em; color: #d0a0b0; margin-top: 5px; margin-bottom: 10px; }
-.sakura-strip { display: flex; justify-content: center; gap: 9px; margin: 8px 0 16px; }
-.sakura { display: inline-block; width: 14px; height: 14px; }
+.deco-line { height:0.5px; width:44px; background:#c0b4e8; }
+.deco-dot  { width:4px; height:4px; border-radius:50%; background:#8870c8; flex-shrink:0; }
+.cal-title { font-family:'Hiragino Mincho ProN','Yu Mincho','Georgia',serif; font-size:23px; font-weight:400; color:#3a2878; letter-spacing:0.16em; }
+.cal-sub   { font-size:10px; letter-spacing:0.2em; color:#9080c8; margin-top:5px; margin-bottom:10px; }
+.deco-strip { display:flex; justify-content:center; gap:9px; margin:8px 0 16px; }
+.deco-icon  { display:inline-block; width:14px; height:14px; }
 
-.filter-section { margin-bottom: 1.1rem; }
-.filter-label {
-  text-align: center; font-size: 9.5px; letter-spacing: 0.16em;
-  color: #d0a8b8; margin-bottom: 8px;
-}
-.filter-btns { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; }
+.filter-section { margin-bottom:1.1rem; }
+.filter-label { text-align:center; font-size:9.5px; letter-spacing:0.16em; color:#8070b8; margin-bottom:8px; }
+.filter-btns  { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; }
 .fbtn {
-  font-size: 11px; padding: 6px 14px; border-radius: 20px;
-  border: 1.5px solid transparent; cursor: pointer;
-  letter-spacing: 0.05em; font-weight: 500;
-  font-family: 'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
-  transition: transform 0.12s, opacity 0.15s, box-shadow 0.12s;
+  font-size:11px; padding:6px 14px; border-radius:20px;
+  border:1.5px solid transparent; cursor:pointer;
+  letter-spacing:0.05em; font-weight:500;
+  font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
+  transition:transform 0.12s, opacity 0.15s, box-shadow 0.12s;
 }
-.fbtn:hover { transform: translateY(-2px); box-shadow: 0 3px 10px rgba(0,0,0,0.08); }
-.fbtn.inactive { opacity: 0.25; transform: none; box-shadow: none; }
-.fbtn.all-btn { background: #fce8f0; color: #b06080; border-color: #f0c8d8; }
-.fbtn.all-btn.active-all { background: #f0d0e0; border-color: #e0a8c0; }
+.fbtn:hover { transform:translateY(-2px); box-shadow:0 3px 10px rgba(0,0,0,0.08); }
+.fbtn.inactive { opacity:0.25; transform:none; box-shadow:none; }
+.fbtn.all-btn { background:#ece8fa; color:#4a3090; border-color:#c0b0e8; }
+.fbtn.all-btn.active-all { background:#d8d0f4; border-color:#a090d8; }
 
 .legend {
-  display: flex; flex-wrap: wrap; gap: 6px 14px; justify-content: center;
-  margin-bottom: 1.1rem; padding: 10px 16px;
-  background: #fff8fa; border: 0.5px solid #f4d8e4; border-radius: 14px;
+  display:flex; flex-wrap:wrap; gap:6px 14px; justify-content:center;
+  margin-bottom:1.1rem; padding:10px 16px;
+  background:#f8f6fd; border:0.5px solid #c8c0ea; border-radius:14px;
 }
-.leg-item { display: flex; align-items: center; gap: 5px; font-size: 10.5px; color: #9a6878; letter-spacing: 0.04em; }
-.leg-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.leg-item { display:flex; align-items:center; gap:5px; font-size:10.5px; color:#4a3880; letter-spacing:0.04em; }
+.leg-dot  { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
 
-.calendar { display: grid; grid-template-columns: repeat(7, minmax(0,1fr)); gap: 6px; }
-.dow { text-align: center; font-size: 10px; letter-spacing: 0.08em; color: #c098a8; padding: 3px 0 8px; }
-.dow.sun { color: #c05868; } .dow.sat { color: #7888c0; }
+.cal-header {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0,1fr));
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.dow { text-align:center; font-size:10px; letter-spacing:0.08em; color:#9088b8; padding:3px 0 8px; }
+.dow.sun { color:#c06868; } .dow.sat { color:#5880b8; }
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0,1fr));
+  gap: 6px;
+  margin-bottom: 6px;
+  position: relative;
+}
 
 .cell {
-  background: #fff; border: 0.5px solid #f4dce6; border-radius: 11px;
-  padding: 7px 6px 8px; min-height: 92px;
+  background: #fdfcff;
+  border: 0.5px solid #d4ccea;
+  border-radius: 11px;
+  padding: 7px 6px 8px; min-height: 96px;
   display: flex; flex-direction: column; gap: 3px;
   transition: opacity 0.22s, filter 0.22s, border-color 0.2s, box-shadow 0.2s;
 }
-.cell.empty { background: transparent; border-color: transparent; }
-.cell.hol { background: #fff6f8; border-color: #f5c8d4; }
-.cell.dimmed { opacity: 0.14; filter: grayscale(0.5); }
-.cell.highlighted { border-color: #e8a0b8; box-shadow: 0 0 0 1.5px #f4c8d8; }
+.cell.empty   { background:transparent; border-color:transparent; }
+.cell.dimmed      { opacity:0.14; filter:grayscale(0.5); }
+.cell.highlighted { border-color:#8870c8; box-shadow:0 0 0 1.5px #c0b0e8; }
 
-.dnum { font-family: 'Georgia',serif; font-size: 13px; color: #8a6070; margin-bottom: 2px; line-height: 1; }
-.dnum.sun { color: #be4858; } .dnum.sat { color: #6070b8; }
-.hmark { font-size: 8.5px; color: #d07888; margin-left: 2px; font-weight: 400; font-family: inherit; }
+.dnum { font-family:'Georgia',serif; font-size:13px; color:#4a3880; margin-bottom:2px; line-height:1; }
+.dnum.sun { color:#be4848; } .dnum.sat { color:#4868b0; }
 
 .badge {
-  font-size: 10px; font-weight: 500; border-radius: 5px; padding: 2px 5px;
-  line-height: 1.5; display: flex; align-items: center; gap: 2px; letter-spacing: 0.02em;
+  font-size:9.5px; font-weight:500; border-radius:5px; padding:2px 5px;
+  line-height:1.5; display:flex; align-items:center; gap:2px; letter-spacing:0.02em;
 }
-.bl { font-size: 8px; opacity: 0.68; flex-shrink: 0; font-weight: 400; }
+.bl { font-size:8px; opacity:0.68; flex-shrink:0; font-weight:400; }
 
-.m-momoti   { background: #fde0e8; color: #a03050; }
-.m-kaori    { background: #fde8d8; color: #a04820; }
-.m-heri     { background: #d8f4e8; color: #1a7848; }
-.m-dori     { background: #d8eafa; color: #1a4e90; }
-.m-tara     { background: #fdf4d0; color: #8a6000; }
-.m-nonca    { background: #f0dafa; color: #6c20a0; }
-.m-nana     { background: #e2f5d0; color: #2e7010; }
-.m-mahoyama { background: #e8e0f8; color: #4030a0; }
+.m-momoti { background:#fde0e8; color:#a03050; }
+.m-dori   { background:#d8eafa; color:#1a4e90; }
+.m-nana   { background:#e2f5d0; color:#2e7010; }
+.m-marie  { background:#ffecd8; color:#a04800; }
+.m-miku   { background:#e8e0ff; color:#5030a0; }
 
 .tbd {
-  background: #ff3070; color: #fff; font-weight: 700; font-size: 10px;
-  animation: tbdpulse 1.8s ease-in-out infinite;
+  background: #ff2060;
+  color: #fff;
+  font-weight: 700;
+  font-size: 9.5px;
+  border-radius: 5px;
 }
-@keyframes tbdpulse {
-  0%,100% { background: #ff3070; }
-  50%      { background: #ff78a8; }
+  50%      { background: #ff6090; box-shadow: 0 0 0 4px #ffb0cc; }
 }
 </style>
 </head>
@@ -113,17 +115,17 @@ body {
 <div class="wrap">
 
 <div class="header-area">
-  <div class="cal-en">April 2026</div>
+  <div class="cal-en">June 2026</div>
   <div class="header-deco">
     <div class="deco-line"></div><div class="deco-dot"></div>
-    <div class="cal-title">4月のシフト</div>
+    <div class="cal-title">6月のシフト</div>
     <div class="deco-dot"></div><div class="deco-line"></div>
   </div>
-  <div class="cal-sub">春のおしごとカレンダー</div>
-  <div class="sakura-strip">
-    <svg class="sakura" viewBox="0 0 14 14"><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(0,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad4e0" transform="rotate(72,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(144,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad4e0" transform="rotate(216,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(288,7,7)"/><circle cx="7" cy="7" r="1.5" fill="#e890a0"/></svg>
-    <svg class="sakura" viewBox="0 0 14 14"><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad8e6" transform="rotate(36,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(108,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad8e6" transform="rotate(180,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(252,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad8e6" transform="rotate(324,7,7)"/><circle cx="7" cy="7" r="1.5" fill="#e8a0b0"/></svg>
-    <svg class="sakura" viewBox="0 0 14 14"><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(18,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad4e0" transform="rotate(90,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(162,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#fad4e0" transform="rotate(234,7,7)"/><ellipse cx="7" cy="3.5" rx="2.2" ry="3.5" fill="#f5c0ce" transform="rotate(306,7,7)"/><circle cx="7" cy="7" r="1.5" fill="#e890a0"/></svg>
+  <div class="cal-sub">おしごとカレンダー</div>
+  <div class="deco-strip">
+    <svg class="deco-icon" viewBox="0 0 14 14"><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#c0aef0" transform="rotate(0,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#d8ccf8" transform="rotate(72,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#c0aef0" transform="rotate(144,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#d8ccf8" transform="rotate(216,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#c0aef0" transform="rotate(288,7,7)"/><circle cx="7" cy="7" r="1.5" fill="#7860c8"/></svg>
+    <svg class="deco-icon" viewBox="0 0 14 14"><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#e8b8d8" transform="rotate(36,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#f4d0e8" transform="rotate(108,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#e8b8d8" transform="rotate(180,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#f4d0e8" transform="rotate(252,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#e8b8d8" transform="rotate(324,7,7)"/><circle cx="7" cy="7" r="1.5" fill="#c070a0"/></svg>
+    <svg class="deco-icon" viewBox="0 0 14 14"><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#c0aef0" transform="rotate(18,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#d8ccf8" transform="rotate(90,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#c0aef0" transform="rotate(162,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#d8ccf8" transform="rotate(234,7,7)"/><ellipse cx="7" cy="3.5" rx="2" ry="3.2" fill="#c0aef0" transform="rotate(306,7,7)"/><circle cx="7" cy="7" r="1.5" fill="#7860c8"/></svg>
   </div>
 </div>
 
@@ -131,191 +133,238 @@ body {
   <div class="filter-label">— メンバーで絞り込む —</div>
   <div class="filter-btns">
     <button class="fbtn all-btn active-all" data-member="all">すべて表示</button>
-    <button class="fbtn" data-member="momoti"   style="background:#fde0e8;color:#a03050;border-color:#f8bcd0">ももてぃ</button>
-    <button class="fbtn" data-member="kaori"    style="background:#fde8d8;color:#a04820;border-color:#f8ccb0">かおり</button>
-    <button class="fbtn" data-member="heri"     style="background:#d8f4e8;color:#1a7848;border-color:#a8e8c8">へり</button>
-    <button class="fbtn" data-member="dori"     style="background:#d8eafa;color:#1a4e90;border-color:#a8d4f4">どり</button>
-    <button class="fbtn" data-member="tara"     style="background:#fdf4d0;color:#8a6000;border-color:#f4dea0">たら</button>
-    <button class="fbtn" data-member="nonca"    style="background:#f0dafa;color:#6c20a0;border-color:#ddb8f4">nonca</button>
-    <button class="fbtn" data-member="nana"     style="background:#e2f5d0;color:#2e7010;border-color:#b8e898">nana</button>
-    <button class="fbtn" data-member="mahoyama" style="background:#e8e0f8;color:#4030a0;border-color:#c8b8f0">まほうやま</button>
+    <button class="fbtn" data-member="momoti" style="background:#fde0e8;color:#a03050;border-color:#f8bcd0">ももてぃ</button>
+    <button class="fbtn" data-member="dori"   style="background:#d8eafa;color:#1a4e90;border-color:#a8d4f4">どり</button>
+    <button class="fbtn" data-member="nana"   style="background:#e2f5d0;color:#2e7010;border-color:#b8e898">nana</button>
+    <button class="fbtn" data-member="marie"  style="background:#ffecd8;color:#a04800;border-color:#ffd0a8">marie</button>
+    <button class="fbtn" data-member="miku"   style="background:#e8e0ff;color:#5030a0;border-color:#c8b8f0">みく</button>
   </div>
 </div>
 
 <div class="legend">
   <div class="leg-item"><div class="leg-dot" style="background:#f8bcd0"></div>ももてぃ</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#f8ccb0"></div>かおり</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#a8e8c8"></div>へり</div>
   <div class="leg-item"><div class="leg-dot" style="background:#a8d4f4"></div>どり</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#f4dea0"></div>たら</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#ddb8f4"></div>nonca</div>
   <div class="leg-item"><div class="leg-dot" style="background:#b8e898"></div>nana</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#c8b8f0"></div>まほうやま</div>
-  <div class="leg-item"><div class="leg-dot" style="background:#ff3070"></div>未定</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#ffd0a8"></div>marie</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#c8b8f0"></div>みく</div>
 </div>
 
-<div class="calendar" id="cal">
-  <div class="dow sun">日</div><div class="dow">月</div><div class="dow">火</div>
-  <div class="dow">水</div><div class="dow">木</div><div class="dow">金</div><div class="dow sat">土</div>
-
-  <div class="cell empty"></div><div class="cell empty"></div><div class="cell empty"></div>
-
-  <div class="cell" data-members="momoti kaori">
-    <div class="dnum">1</div>
-    <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
-    <div class="badge m-kaori"><span class="bl">夜</span>かおり</div>
-  </div>
-  <div class="cell" data-members="heri dori">
-    <div class="dnum">2</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell" data-members="tara nonca">
-    <div class="dnum">3</div>
-    <div class="badge m-tara"><span class="bl">昼</span>たら</div>
-    <div class="badge m-nonca"><span class="bl">夜</span>nonca</div>
-  </div>
-  <div class="cell" data-members="nana nonca">
-    <div class="dnum sat">4</div>
-    <div class="badge m-nana"><span class="bl">昼</span>nana</div>
-    <div class="badge m-nonca"><span class="bl">夜</span>nonca</div>
-  </div>
-
-  <div class="cell" data-members="heri dori">
-    <div class="dnum sun">5</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell" data-members="heri nana">
-    <div class="dnum">6</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-nana"><span class="bl">夜</span>nana</div>
-  </div>
-  <div class="cell" data-members="kaori momoti">
-    <div class="dnum">7</div>
-    <div class="badge m-kaori"><span class="bl">昼</span>かおり</div>
-    <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
-  </div>
-  <div class="cell" data-members="tara nana">
-    <div class="dnum">8</div>
-    <div class="badge m-tara"><span class="bl">昼</span>たら</div>
-    <div class="badge m-nana"><span class="bl">夜</span>nana</div>
-  </div>
-  <div class="cell" data-members="nonca mahoyama">
-    <div class="dnum">9</div>
-    <div class="badge m-nonca"><span class="bl">昼</span>nonca</div>
-    <div class="badge m-mahoyama"><span class="bl">夜</span>まほうやま</div>
-  </div>
-  <div class="cell" data-members="mahoyama nonca">
-    <div class="dnum">10</div>
-    <div class="badge m-mahoyama"><span class="bl">昼</span>まほうやま</div>
-    <div class="badge m-nonca"><span class="bl">夜</span>nonca</div>
-  </div>
-  <div class="cell" data-members="kaori tara">
-    <div class="dnum sat">11</div>
-    <div class="badge m-kaori"><span class="bl">昼</span>かおり</div>
-    <div class="badge m-tara"><span class="bl">夜</span>たら</div>
-  </div>
-
-  <div class="cell" data-members="dori momoti">
-    <div class="dnum sun">12</div>
-    <div class="badge m-dori"><span class="bl">昼</span>どり</div>
-    <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
-  </div>
-  <div class="cell" data-members="nonca dori">
-    <div class="dnum">13</div>
-    <div class="badge m-nonca"><span class="bl">昼</span>nonca</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell" data-members="tara dori">
-    <div class="dnum">14</div>
-    <div class="badge m-tara"><span class="bl">昼</span>たら</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell" data-members="momoti kaori">
-    <div class="dnum">15</div>
-    <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
-    <div class="badge m-kaori"><span class="bl">夜</span>かおり</div>
-  </div>
-  <div class="cell" data-members="heri mahoyama">
-    <div class="dnum">16</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-mahoyama"><span class="bl">夜</span>まほうやま</div>
-  </div>
-  <div class="cell" data-members="tara nana">
-    <div class="dnum">17</div>
-    <div class="badge m-tara"><span class="bl">昼</span>たら</div>
-    <div class="badge m-nana"><span class="bl">夜</span>nana</div>
-  </div>
-  <div class="cell" data-members="heri mahoyama">
-    <div class="dnum sat">18</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-mahoyama"><span class="bl"夜</span>まほうやま</div>
-  </div>
-
-  <div class="cell" data-members="kaori tara">
-    <div class="dnum sun">19</div>
-    <div class="badge m-kaori"><span class="bl">昼</span>かおり</div>
-    <div class="badge m-tara"><span class="bl">夜</span>たら</div>
-  </div>
-  <div class="cell" data-members="heri dori">
-    <div class="dnum">20</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell" data-members="nonca momoti">
-    <div class="dnum">21</div>
-    <div class="badge m-nonca"><span class="bl">昼</span>nonca</div>
-    <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
-  </div>
-  <div class="cell" data-members="tara kaori">
-    <div class="dnum">22</div>
-    <div class="badge m-tara"><span class="bl">昼</span>たら</div>
-    <div class="badge m-kaori"><span class="bl">夜</span>かおり</div>
-  </div>
-  <div class="cell" data-members="heri momoti">
-    <div class="dnum">23</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
-  </div>
-  <div class="cell" data-members="mahoyama nana">
-    <div class="dnum">24</div>
-    <div class="badge m-mahoyama"><span class="bl">昼</span>まほうやま</div>
-    <div class="badge m-nana"><span class="bl">夜</span>nana</div>
-  </div>
-  <div class="cell" data-members="kaori nana">
-    <div class="dnum sat">25</div>
-    <div class="badge m-kaori"><span class="bl">昼</span>かおり</div>
-    <div class="badge m-nana"><span class="bl">夜</span>nana</div>
-  </div>
-
-  <div class="cell" data-members="momoti heri">
-    <div class="dnum sun">26</div>
-    <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
-    <div class="badge m-heri"><span class="bl">夜</span>へり</div>
-  </div>
-  <div class="cell" data-members="mahoyama nana">
-    <div class="dnum">27</div>
-    <div class="badge m-mahoyama"><span class="bl">昼</span>まほうやま</div>
-    <div class="badge m-nana"><span class="bl">夜</span>nana</div>
-  </div>
-  <div class="cell" data-members="kaori dori">
-    <div class="dnum">28</div>
-    <div class="badge m-kaori"><span class="bl">昼</span>かおり</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell hol" data-members="mahoyama dori">
-    <div class="dnum sun">29<span class="hmark">祝</span></div>
-    <div class="badge m-mahoyama"><span class="bl">昼</span>まほうやま</div>
-    <div class="badge m-dori"><span class="bl">夜</span>どり</div>
-  </div>
-  <div class="cell" data-members="heri mahoyama">
-    <div class="dnum">30</div>
-    <div class="badge m-heri"><span class="bl">昼</span>へり</div>
-    <div class="badge m-mahoyama"><span class="bl">夜</span>まほうやま</div>
-  </div>
-  <div class="cell empty"></div><div class="cell empty"></div>
+<div class="cal-header">
+  <div class="dow sun">日</div>
+  <div class="dow">月</div>
+  <div class="dow">火</div>
+  <div class="dow">水</div>
+  <div class="dow">木</div>
+  <div class="dow">金</div>
+  <div class="dow sat">土</div>
 </div>
+
+<div id="cal">
+
+  <!-- 第1週: 6/1=月 → 日は空白 -->
+  <div class="week">
+    <div class="cell empty"></div>
+    <!-- 6/1 月 -->
+    <div class="cell" data-members="miku momoti">
+      <div class="dnum">1</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
+    </div>
+    <!-- 6/2 火 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum">2</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/3 水 -->
+    <div class="cell" data-members="momoti nana">
+      <div class="dnum">3</div>
+      <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/4 木 -->
+    <div class="cell" data-members="tbd dori">
+      <div class="dnum">4</div>
+      <div class="badge tbd"><span class="bl" style="opacity:.85">昼</span>未定</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/5 金 -->
+    <div class="cell" data-members="miku momoti">
+      <div class="dnum">5</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
+    </div>
+    <!-- 6/6 土 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum sat">6</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+  </div>
+
+  <!-- 第2週: 6/7(日)〜6/13(土) -->
+  <div class="week">
+    <!-- 6/7 日 -->
+    <div class="cell" data-members="tbd momoti">
+      <div class="dnum sun">7</div>
+      <div class="badge tbd"><span class="bl" style="opacity:.85">昼</span>未定</div>
+      <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
+    </div>
+    <!-- 6/8 月 -->
+    <div class="cell" data-members="miku nana">
+      <div class="dnum">8</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/9 火 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum">9</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/10 水 -->
+    <div class="cell" data-members="momoti dori">
+      <div class="dnum">10</div>
+      <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/11 木 -->
+    <div class="cell" data-members="momoti nana">
+      <div class="dnum">11</div>
+      <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/12 金 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum">12</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/13 土 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum sat">13</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+  </div>
+
+  <!-- 第3週: 6/14(日)〜6/20(土) -->
+  <div class="week">
+    <!-- 6/14 日 -->
+    <div class="cell" data-members="dori nana">
+      <div class="dnum sun">14</div>
+      <div class="badge m-dori"><span class="bl">昼</span>どり</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/15 月 -->
+    <div class="cell" data-members="miku momoti">
+      <div class="dnum">15</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
+    </div>
+    <!-- 6/16 火 -->
+    <div class="cell" data-members="marie nana">
+      <div class="dnum">16</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/17 水 -->
+    <div class="cell" data-members="momoti dori">
+      <div class="dnum">17</div>
+      <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/18 木 -->
+    <div class="cell" data-members="miku nana">
+      <div class="dnum">18</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/19 金 -->
+    <div class="cell" data-members="marie nana">
+      <div class="dnum">19</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/20 土 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum sat">20</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+  </div>
+
+  <!-- 第4週: 6/21(日)〜6/27(土) -->
+  <div class="week">
+    <!-- 6/21 日 -->
+    <div class="cell" data-members="miku nana">
+      <div class="dnum sun">21</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/22 月 -->
+    <div class="cell" data-members="marie dori">
+      <div class="dnum">22</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <!-- 6/23 火 -->
+    <div class="cell" data-members="miku marie">
+      <div class="dnum">23</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-marie"><span class="bl">夜</span>marie</div>
+    </div>
+    <!-- 6/24 水 -->
+    <div class="cell" data-members="miku nana">
+      <div class="dnum">24</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/25 木 -->
+    <div class="cell" data-members="momoti nana">
+      <div class="dnum">25</div>
+      <div class="badge m-momoti"><span class="bl">昼</span>ももてぃ</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/26 金 -->
+    <div class="cell" data-members="marie momoti">
+      <div class="dnum">26</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
+    </div>
+    <!-- 6/27 土 -->
+    <div class="cell" data-members="miku nana">
+      <div class="dnum sat">27</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+  </div>
+
+  <!-- 第5週: 6/28(日)〜6/30(火) -->
+  <div class="week">
+    <!-- 6/28 日 -->
+    <div class="cell" data-members="miku momoti">
+      <div class="dnum sun">28</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-momoti"><span class="bl">夜</span>ももてぃ</div>
+    </div>
+    <!-- 6/29 月 -->
+    <div class="cell" data-members="marie nana">
+      <div class="dnum">29</div>
+      <div class="badge m-marie"><span class="bl">昼</span>marie</div>
+      <div class="badge m-nana"><span class="bl">夜</span>nana</div>
+    </div>
+    <!-- 6/30 火 -->
+    <div class="cell" data-members="miku dori">
+      <div class="dnum">30</div>
+      <div class="badge m-miku"><span class="bl">昼</span>みく</div>
+      <div class="badge m-dori"><span class="bl">夜</span>どり</div>
+    </div>
+    <div class="cell empty"></div>
+    <div class="cell empty"></div>
+    <div class="cell empty"></div>
+    <div class="cell empty"></div>
+  </div>
 
 </div>
 
@@ -337,13 +386,11 @@ document.querySelectorAll('.fbtn').forEach(btn => {
       if (active === 'all') {
         cell.classList.remove('dimmed', 'highlighted');
       } else {
-        const ms = (cell.dataset.members || '').split(' ');
+        const ms = (cell.dataset.members || '').split(' ').filter(Boolean);
         if (ms.includes(active)) {
-          cell.classList.remove('dimmed');
-          cell.classList.add('highlighted');
+          cell.classList.remove('dimmed'); cell.classList.add('highlighted');
         } else {
-          cell.classList.remove('highlighted');
-          cell.classList.add('dimmed');
+          cell.classList.remove('highlighted'); cell.classList.add('dimmed');
         }
       }
     });
